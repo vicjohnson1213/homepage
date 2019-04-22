@@ -18,6 +18,11 @@ body {
     background-color: #191919;
 }
 
+a {
+    cursor: pointer;
+    transition: color .1s ease-in-out;
+}
+
 .date-container {
     position: absolute;
     bottom: 64px;
@@ -43,7 +48,7 @@ body {
 }
 
 .column {
-    width: 250px;
+    width: 350px;
 }
 
 .column + .column {
@@ -68,23 +73,32 @@ body {
 }
 
 .title + .list {
-    margin-top: 16px;
+    margin-top: 8px;
 }
 
-a {
-    display: block;
+.bookmark {
+    display: flex;
+    padding: 4px;
+    /* text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; */
+}
+
+.link {
     text-decoration: none;
     color: #AAA;
-    transition: color .1s ease-in-out;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
-a:hover {
-    cursor: pointer;
+.link:hover {
     color: #DDD;
 }
 
-a + a {
-    margin-top: 8px;
+.delete {
+    color: rgb(189, 52, 52);
+    margin-right: 8px;
+}
+
+.delete:hover {
+    color: rgb(122, 28, 28);
+    margin-right: 8px;
 }
